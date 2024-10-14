@@ -1,0 +1,10 @@
+#!/bin/sh
+
+mkdir -p build
+
+gcc -Wall -Wextra -Werror -pedantic -Wno-unused-function -O0 -ggdb -o build/compile main.c || exit 1
+./build/compile || exit 1
+chmod +x out
+echo "Running..."
+./out || exit 1
+echo "Done"

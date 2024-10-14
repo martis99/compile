@@ -1,0 +1,6 @@
+#!/bin/sh
+
+mkdir -p build
+
+nasm -f elf64 ./scripts/min.asm -o build/min.o
+ld -o build/min build/min.o --strip-all
